@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand + surface tokens pulled from the Figma design */
+  --navy: #102b46;
+  --green: #087e62;
+  --green-dark: #066b53;
+  --mint-light: #e9f5ef;
+  --mint-accent: #91d5bc;
+  --page-bg: #f6f8fa;
+  --field-bg: #f5f7fa;
+  --border: #e2e8ef;
+  --muted: #64748b;
+  --hero-sub: #d0dce7;
+  --star: #bd7b19;
+  --white: #ffffff;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-green: var(--green);
+  --color-green-dark: var(--green-dark);
+  --color-mint-light: var(--mint-light);
+  --color-mint-accent: var(--mint-accent);
+  --color-page-bg: var(--page-bg);
+  --color-field-bg: var(--field-bg);
+  --color-border-token: var(--border);
+  --color-muted: var(--muted);
+  --color-hero-sub: var(--hero-sub);
+  --color-star: var(--star);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--navy);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Shared content container: 1440 canvas with 64px gutters -> max 1312px inner */
+.container-page {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 64px;
+}
+
+@media (max-width: 768px) {
+  .container-page {
+    padding-inline: 20px;
+  }
+}
